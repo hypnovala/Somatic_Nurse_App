@@ -26,6 +26,7 @@ body {
 
 @layer components {
   .glass-panel {
+    @apply rounded-[28px] border border-white/10 bg-white/10 backdrop-blur-xl shadow-glow;
     @apply rounded-[28px] border border-white/10 bg-white/8 backdrop-blur-xl shadow-glow;
   }
 

@@ -1,3 +1,4 @@
+import type { CheckInSubmission, QuestionDefinition, SomaticExercise, SomaticResult } from '@/lib/types';
 import { CheckInSubmission, QuestionDefinition, SomaticExercise, SomaticResult } from '@/lib/types';
 
 export const QUESTIONS: QuestionDefinition[] = [

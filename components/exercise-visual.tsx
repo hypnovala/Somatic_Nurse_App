@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import type { SomaticExercise } from '@/lib/types';
 import { SomaticExercise } from '@/lib/types';
 
 interface ExerciseVisualProps {
