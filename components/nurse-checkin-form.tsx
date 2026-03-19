@@ -143,7 +143,6 @@ export function NurseCheckinForm() {
             onChange={(event: ChangeEvent<HTMLTextAreaElement>) => setNotes(event.target.value)}
             placeholder="Example: I feel wired, my jaw is tight, and I haven’t fully exhaled since report."
             className="mt-5 min-h-[8rem] w-full rounded-[24px] border border-white/10 bg-white/5 px-4 py-4 text-sm text-white placeholder:text-slate-500 focus:border-cyan-200/30 focus:outline-none focus:ring-2 focus:ring-cyan-300/20"
-            className="mt-5 min-h-32 w-full rounded-[24px] border border-white/10 bg-white/5 px-4 py-4 text-sm text-white placeholder:text-slate-500 focus:border-cyan-200/30 focus:outline-none focus:ring-2 focus:ring-cyan-300/20"
           />
         </section>
 
