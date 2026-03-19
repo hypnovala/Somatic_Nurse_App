@@ -5,6 +5,14 @@ export type QuestionKey =
   | 'breathRestriction'
   | 'support';
 
+export type TtsVoice = 'alloy' | 'verse' | 'sage';
+
+export interface TtsVoiceOption {
+  id: TtsVoice;
+  label: string;
+  description: string;
+}
+
 export type CheckInValues = Record<QuestionKey, number>;
 
 export interface CheckInSubmission {

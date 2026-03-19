@@ -1,4 +1,10 @@
-import type { CheckInSubmission, QuestionDefinition, SomaticExercise, SomaticResult } from '@/lib/types';
+import type {
+  CheckInSubmission,
+  QuestionDefinition,
+  SomaticExercise,
+  SomaticResult,
+  TtsVoiceOption,
+} from '@/lib/types';
 
 export const QUESTIONS: QuestionDefinition[] = [
   {
@@ -25,6 +31,24 @@ export const QUESTIONS: QuestionDefinition[] = [
     key: 'support',
     label: 'How emotionally supported do you feel right now?',
     hint: '1 = very supported, 10 = very alone',
+  },
+];
+
+export const TTS_VOICE_OPTIONS: TtsVoiceOption[] = [
+  {
+    id: 'alloy',
+    label: 'Alloy',
+    description: 'Clear, steady, and grounded for a calm clinical tone.',
+  },
+  {
+    id: 'verse',
+    label: 'Verse',
+    description: 'Warm and restorative for a softer reset experience.',
+  },
+  {
+    id: 'sage',
+    label: 'Sage',
+    description: 'Gentle and reassuring with a composed bedside cadence.',
   },
 ];
 
