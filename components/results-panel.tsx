@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { AudioLines, HeartHandshake, PauseCircle, PlayCircle, RefreshCw, Sparkles } from 'lucide-react';
 import { ExerciseVisual } from '@/components/exercise-visual';
 import type { SomaticResult } from '@/lib/types';
+import { SomaticResult } from '@/lib/types';
 
 interface ResultsPanelProps {
   result: SomaticResult;
