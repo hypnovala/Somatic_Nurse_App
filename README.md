@@ -45,9 +45,12 @@ Create a local `.env.local` file (or add the variable in Vercel project settings
 
 ```bash
 OPENAI_API_KEY=your_openai_api_key_here
+RESEND_API_KEY=your_resend_api_key_here
+SUPPORT_CONTACT_FROM_EMAIL=Somatic Nurse Support <support@yourdomain.com>
+SUPPORT_CONTACT_TO_EMAIL=support@yourdomain.com
 ```
 
-The app uses `app/api/tts/route.ts` to generate server-side audio with OpenAI TTS (`gpt-4o-mini-tts`) and falls back to browser speech synthesis if the API request fails.
+The app uses `app/api/tts/route.ts` to generate server-side audio with OpenAI TTS (`gpt-4o-mini-tts`) and falls back to browser speech synthesis if the API request fails. It also uses `app/api/contact/route.ts` to validate and forward immediate support requests through Resend.
 
 ## Local Development
 
@@ -78,7 +81,7 @@ This app is structured to make it easy to add:
 ## Vercel Deployment
 
 - Use Node.js 20+ (the repo includes `.nvmrc` and an `engines` field in `package.json`).
-- Vercel is configured explicitly via `vercel.json` to use `npm install` and `npm run build`, and the TTS route expects `OPENAI_API_KEY` in your Vercel environment variables.
+- Vercel is configured explicitly via `vercel.json` to use `npm install` and `npm run build`, and the server routes expect `OPENAI_API_KEY`, `RESEND_API_KEY`, `SUPPORT_CONTACT_FROM_EMAIL`, and `SUPPORT_CONTACT_TO_EMAIL` in your Vercel environment variables.
 - If you connect this repo to Vercel, the project should be detected as a Next.js application automatically.
 
 ## Git Conflict Memory

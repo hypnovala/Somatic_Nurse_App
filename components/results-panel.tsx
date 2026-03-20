@@ -14,6 +14,7 @@ import {
   WandSparkles,
 } from 'lucide-react';
 import { ExerciseVisual } from '@/components/exercise-visual';
+import { ImmediateSupportForm } from '@/components/immediate-support-form';
 import { TTS_VOICE_OPTIONS } from '@/lib/somatic';
 import type { SomaticResult, TtsVoice } from '@/lib/types';
 
@@ -268,6 +269,8 @@ export function ResultsPanel({ result, onReset }: ResultsPanelProps) {
             Placeholder card ready for email capture, OpenAI-powered personalization, or a Vercel-backed conversion flow.
           </div>
         </div>
+
+        <ImmediateSupportForm />
 
         <button
           type="button"
