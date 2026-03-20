@@ -11,29 +11,29 @@ html {
 }
 
 body {
-  @apply min-h-screen bg-night text-slate-100 antialiased;
+  @apply min-h-screen bg-deepNavy text-mist antialiased;
   background-image:
-    radial-gradient(circle at top, rgba(79, 116, 255, 0.32), transparent 28%),
-    radial-gradient(circle at 18% 14%, rgba(66, 215, 200, 0.2), transparent 20%),
-    radial-gradient(circle at 78% 12%, rgba(110, 231, 249, 0.16), transparent 24%),
-    linear-gradient(180deg, #07111f 0%, #081321 48%, #050b14 100%);
+    radial-gradient(circle at top, rgba(91, 122, 171, 0.24), transparent 28%),
+    radial-gradient(circle at 18% 14%, rgba(79, 174, 165, 0.16), transparent 20%),
+    radial-gradient(circle at 78% 12%, rgba(141, 221, 224, 0.12), transparent 24%),
+    linear-gradient(180deg, #06101c 0%, #0a1625 48%, #050c14 100%);
 }
 
 ::selection {
-  background: rgba(110, 231, 249, 0.25);
+  background: rgba(141, 221, 224, 0.22);
   color: white;
 }
 
 @layer components {
   .glass-panel {
-    @apply rounded-[28px] border border-white/10 bg-white/10 backdrop-blur-xl shadow-glow;
+    @apply rounded-[28px] border border-white/10 bg-white/[0.07] backdrop-blur-xl shadow-glow;
   }
 
   .section-title {
-    @apply text-lg font-medium text-white md:text-xl;
+    @apply text-lg font-medium text-mist md:text-xl;
   }
 
   .subtle-copy {
-    @apply text-sm leading-6 text-slate-300 md:text-base;
+    @apply text-sm leading-6 text-mistMuted md:text-base;
   }
 }

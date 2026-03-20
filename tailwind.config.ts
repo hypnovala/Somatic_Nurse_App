@@ -9,16 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        night: '#07111f',
-        cyanGlow: '#6ee7f9',
-        tealGlow: '#42d7c8',
-        blueGlow: '#4f74ff',
+        deepNavy: '#06101c',
+        midnight: '#0c1b2d',
+        softTeal: '#4faea5',
+        healingCyan: '#8ddde0',
+        mist: '#d9e7ee',
+        mistMuted: '#9fb4c1',
       },
       boxShadow: {
-        glow: '0 0 0 1px rgba(110, 231, 249, 0.12), 0 24px 80px rgba(7, 17, 31, 0.55)',
+        glow: '0 0 0 1px rgba(141, 221, 224, 0.14), 0 28px 90px rgba(2, 10, 19, 0.62)',
       },
       backgroundImage: {
-        'hero-radial': 'radial-gradient(circle at top, rgba(79, 116, 255, 0.35), transparent 30%), radial-gradient(circle at 20% 20%, rgba(66, 215, 200, 0.24), transparent 25%), radial-gradient(circle at 80% 0%, rgba(110, 231, 249, 0.18), transparent 28%)',
+        'hero-radial': 'radial-gradient(circle at top, rgba(91, 122, 171, 0.28), transparent 30%), radial-gradient(circle at 18% 18%, rgba(79, 174, 165, 0.18), transparent 24%), radial-gradient(circle at 82% 0%, rgba(141, 221, 224, 0.14), transparent 28%)',
       },
       keyframes: {
         float: {

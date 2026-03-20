@@ -158,15 +158,15 @@ export function ResultsPanel({ result, onReset }: ResultsPanelProps) {
     >
       <div className="space-y-6">
         <div className="glass-panel p-6 md:p-8">
-          <div className="flex items-center gap-3 text-cyan-100">
+          <div className="flex items-center gap-3 text-healingCyan">
             <Sparkles className="h-5 w-5" />
-            <span className="text-sm uppercase tracking-[0.24em] text-cyan-100/80">Your Somatic Reset</span>
+            <span className="text-sm uppercase tracking-[0.24em] text-healingCyan/80">Your Somatic Reset</span>
           </div>
-          <h2 className="mt-4 text-2xl font-semibold text-white md:text-3xl">{encouragementTitle}</h2>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-200 md:text-lg">{result.supportMessage}</p>
+          <h2 className="mt-4 text-2xl font-semibold text-mist md:text-3xl">{encouragementTitle}</h2>
+          <p className="mt-4 max-w-3xl text-base leading-7 text-mistMuted md:text-lg">{result.supportMessage}</p>
           {result.noteSummary ? (
-            <div className="mt-5 rounded-3xl border border-white/10 bg-white/5 p-4 text-sm leading-6 text-slate-300">
-              <span className="font-medium text-white">What you noted:</span> {result.noteSummary}
+            <div className="mt-5 rounded-3xl border border-white/10 bg-white/5 p-4 text-sm leading-6 text-mistMuted">
+              <span className="font-medium text-mist">What you noted:</span> {result.noteSummary}
             </div>
           ) : null}
         </div>
@@ -174,24 +174,24 @@ export function ResultsPanel({ result, onReset }: ResultsPanelProps) {
         <div className="glass-panel p-6 md:p-8">
           <div className="flex flex-wrap items-start justify-between gap-5">
             <div>
-              <p className="text-sm uppercase tracking-[0.24em] text-cyan-100/70">Recommended Exercise</p>
-              <h3 className="mt-2 text-2xl font-semibold text-white">{result.exercise.name}</h3>
-              <p className="mt-2 text-sm text-slate-300">Duration: {result.exercise.duration}</p>
+              <p className="text-sm uppercase tracking-[0.24em] text-healingCyan/80">Recommended Exercise</p>
+              <h3 className="mt-2 text-2xl font-semibold text-mist">{result.exercise.name}</h3>
+              <p className="mt-2 text-sm text-mistMuted">Duration: {result.exercise.duration}</p>
             </div>
 
             <div className="w-full max-w-sm space-y-4 rounded-[28px] border border-white/10 bg-white/5 p-4">
-              <div className="flex items-center gap-2 text-cyan-100">
+              <div className="flex items-center gap-2 text-healingCyan">
                 <WandSparkles className="h-4 w-4" />
-                <p className="text-sm font-medium text-white">AI voice encouragement</p>
+                <p className="text-sm font-medium text-mist">AI voice encouragement</p>
               </div>
-              <label className="block text-sm text-slate-300" htmlFor="voice-select">
+              <label className="block text-sm text-mistMuted" htmlFor="voice-select">
                 Voice
               </label>
               <select
                 id="voice-select"
                 value={selectedVoice}
                 onChange={(event: ChangeEvent<HTMLSelectElement>) => setSelectedVoice(event.target.value as TtsVoice)}
-                className="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition focus:border-cyan-200/30 focus:ring-2 focus:ring-cyan-300/20"
+                className="w-full rounded-2xl border border-white/10 bg-midnight/80 px-4 py-3 text-sm text-mist outline-none transition focus:border-healingCyan/30 focus:ring-2 focus:ring-healingCyan/20"
               >
                 {TTS_VOICE_OPTIONS.map((voice) => (
                   <option key={voice.id} value={voice.id}>
@@ -199,26 +199,26 @@ export function ResultsPanel({ result, onReset }: ResultsPanelProps) {
                   </option>
                 ))}
               </select>
-              <p className="text-xs leading-5 text-slate-400">
+              <p className="text-xs leading-5 text-mistMuted/80">
                 {TTS_VOICE_OPTIONS.find((voice) => voice.id === selectedVoice)?.description}
               </p>
               <button
                 type="button"
                 onClick={() => void handleAudioToggle()}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-cyan-200/20 bg-cyan-300/10 px-4 py-3 text-sm font-medium text-cyan-50 transition hover:bg-cyan-300/15"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-healingCyan/20 bg-healingCyan/10 px-4 py-3 text-sm font-medium text-healingCyan transition hover:bg-healingCyan/15"
               >
                 {isPlaying || isLoadingAudio ? <PauseCircle className="h-4 w-4" /> : <PlayCircle className="h-4 w-4" />}
                 {isLoadingAudio ? 'Preparing AI audio…' : isPlaying ? 'Stop audio' : 'Play AI encouragement'}
               </button>
-              <div className="rounded-2xl border border-cyan-200/10 bg-cyan-100/5 p-3 text-xs leading-5 text-cyan-50/90">
+              <div className="rounded-2xl border border-healingCyan/10 bg-healingCyan/5 p-3 text-xs leading-5 text-mist">
                 Uses `/api/tts` with OpenAI TTS when `OPENAI_API_KEY` is configured, then falls back to browser speech if the request fails.
               </div>
             </div>
           </div>
 
           {audioStatus ? (
-            <div className="mt-4 flex items-start gap-2 rounded-2xl border border-white/10 bg-white/5 p-3 text-sm leading-6 text-slate-300">
-              <AlertCircle className="mt-1 h-4 w-4 shrink-0 text-cyan-100" />
+            <div className="mt-4 flex items-start gap-2 rounded-2xl border border-white/10 bg-white/5 p-3 text-sm leading-6 text-mistMuted">
+              <AlertCircle className="mt-1 h-4 w-4 shrink-0 text-healingCyan" />
               <p>{audioStatus}</p>
             </div>
           ) : null}
@@ -231,14 +231,14 @@ export function ResultsPanel({ result, onReset }: ResultsPanelProps) {
 
       <div className="space-y-6">
         <div className="glass-panel p-6 md:p-8">
-          <div className="flex items-center gap-3 text-cyan-100">
+          <div className="flex items-center gap-3 text-healingCyan">
             <AudioLines className="h-5 w-5" />
             <h3 className="section-title">Step-by-step guidance</h3>
           </div>
           <ol className="mt-5 space-y-4">
             {result.exercise.steps.map((step, index) => (
               <li key={step} className="flex gap-4 rounded-3xl border border-white/8 bg-white/5 p-4">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-cyan-300/10 text-sm font-semibold text-cyan-100">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-healingCyan/10 text-sm font-semibold text-healingCyan">
                   {index + 1}
                 </div>
                 <p className="subtle-copy">{step}</p>
@@ -248,23 +248,23 @@ export function ResultsPanel({ result, onReset }: ResultsPanelProps) {
         </div>
 
         <div className="glass-panel p-6 md:p-8">
-          <div className="flex items-center gap-3 text-cyan-100">
+          <div className="flex items-center gap-3 text-healingCyan">
             <HeartHandshake className="h-5 w-5" />
             <h3 className="section-title">Why this helps</h3>
           </div>
           <p className="mt-4 subtle-copy">{result.whyThisHelps}</p>
-          <p className="mt-4 rounded-3xl border border-cyan-200/10 bg-cyan-100/5 p-4 text-sm leading-6 text-cyan-50/90">
+          <p className="mt-4 rounded-3xl border border-healingCyan/10 bg-healingCyan/5 p-4 text-sm leading-6 text-mist">
             {result.exercise.why}
           </p>
         </div>
 
         <div className="glass-panel p-6 md:p-8">
-          <p className="text-sm uppercase tracking-[0.24em] text-cyan-100/70">Next Step Placeholder</p>
-          <h3 className="mt-3 text-2xl font-semibold text-white">Continue your care beyond the shift.</h3>
+          <p className="text-sm uppercase tracking-[0.24em] text-healingCyan/80">Next Step Placeholder</p>
+          <h3 className="mt-3 text-2xl font-semibold text-mist">Continue your care beyond the shift.</h3>
           <p className="mt-3 subtle-copy">
             Future CTA space for a free guide, restorative membership, or Houston bodywork offering.
           </p>
-          <div className="mt-5 rounded-3xl border border-dashed border-cyan-200/20 bg-white/5 p-4 text-sm text-slate-300">
+          <div className="mt-5 rounded-3xl border border-dashed border-healingCyan/20 bg-white/5 p-4 text-sm text-mistMuted">
             Placeholder card ready for email capture, OpenAI-powered personalization, or a Vercel-backed conversion flow.
           </div>
         </div>
@@ -272,7 +272,7 @@ export function ResultsPanel({ result, onReset }: ResultsPanelProps) {
         <button
           type="button"
           onClick={onReset}
-          className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/10"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium text-mist transition hover:bg-white/10"
         >
           <RefreshCw className="h-4 w-4" />
           Start Over

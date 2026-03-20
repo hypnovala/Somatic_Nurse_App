@@ -20,10 +20,10 @@ export function SoftMetric({ label, hint, value, onChange }: SoftMetricProps) {
     >
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="text-base font-medium text-white md:text-lg">{label}</p>
-          <p className="mt-1 text-sm text-slate-400">{hint}</p>
+          <p className="text-base font-medium text-mist md:text-lg">{label}</p>
+          <p className="mt-1 text-sm text-mistMuted">{hint}</p>
         </div>
-        <div className="rounded-full border border-cyan-200/20 bg-cyan-100/10 px-3 py-1 text-sm font-medium text-cyan-100">
+        <div className="rounded-full border border-healingCyan/20 bg-healingCyan/10 px-3 py-1 text-sm font-medium text-healingCyan">
           {value}/10
         </div>
       </div>
@@ -31,14 +31,14 @@ export function SoftMetric({ label, hint, value, onChange }: SoftMetricProps) {
       <div className="mt-5">
         <input
           aria-label={label}
-          className="h-2 w-full cursor-pointer appearance-none rounded-full bg-white/10 accent-cyan-300"
+          className="h-2 w-full cursor-pointer appearance-none rounded-full bg-white/10 accent-softTeal"
           type="range"
           min={1}
           max={10}
           value={value}
           onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(Number(event.target.value))}
         />
-        <div className="mt-2 flex justify-between text-xs text-slate-500">
+        <div className="mt-2 flex justify-between text-xs text-mistMuted/70">
           <span>1</span>
           <span>10</span>
         </div>

@@ -80,3 +80,20 @@ This app is structured to make it easy to add:
 - Use Node.js 20+ (the repo includes `.nvmrc` and an `engines` field in `package.json`).
 - Vercel is configured explicitly via `vercel.json` to use `npm install` and `npm run build`, and the TTS route expects `OPENAI_API_KEY` in your Vercel environment variables.
 - If you connect this repo to Vercel, the project should be detected as a Next.js application automatically.
+
+## Git Conflict Memory
+
+To make this repo remember repeated conflict resolutions in your local clone, run:
+
+```bash
+npm run git:setup
+```
+
+That configures repo-local Git settings for:
+
+- `rerere.enabled=true`
+- `rerere.autoupdate=true`
+- `merge.conflictstyle=zdiff3`
+- `merge.ours.driver=true`
+
+The repo also includes `.gitattributes` rules so `package-lock.json`, `next-env.d.ts`, and `*.tsbuildinfo` prefer the repo's `ours` merge driver instead of forcing manual conflict cleanup each time.
