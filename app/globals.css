@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen bg-deepNavy text-mist antialiased;
+  background-image:
+    radial-gradient(circle at top, rgba(91, 122, 171, 0.24), transparent 28%),
+    radial-gradient(circle at 18% 14%, rgba(79, 174, 165, 0.16), transparent 20%),
+    radial-gradient(circle at 78% 12%, rgba(141, 221, 224, 0.12), transparent 24%),
+    linear-gradient(180deg, #06101c 0%, #0a1625 48%, #050c14 100%);
+}
+
+::selection {
+  background: rgba(141, 221, 224, 0.22);
+  color: white;
+}
+
+@layer components {
+  .glass-panel {
+    @apply rounded-[28px] border border-white/8 bg-white/[0.07] backdrop-blur-xl shadow-glow;
+  }
+
+  .section-title {
+    @apply text-lg font-medium text-mist md:text-xl;
+  }
+
+  .subtle-copy {
+    @apply text-sm leading-6 text-mistMuted md:text-base;
+  }
+}
