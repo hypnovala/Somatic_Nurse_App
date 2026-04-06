@@ -102,4 +102,4 @@ That configures repo-local Git settings for:
 The repo also includes `.gitattributes` rules so `package-lock.json`, `next-env.d.ts`, and `*.tsbuildinfo` prefer the repo's `ours` merge driver instead of forcing manual conflict cleanup each time.
 ## GitHub Repo Prompt (when ready)
 
-Create a new GitHub repository named **`trail-somatic-body-app`** and push this codebase as the initial one-time-trial template for your landing page link strategy.
+Create a new GitHub repository named **`somatic-nurse-app`** and push this codebase as the initial one-time-trial template for your landing page link strategy.

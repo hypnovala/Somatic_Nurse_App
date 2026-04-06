@@ -50,13 +50,13 @@ export function NurseCheckinForm() {
           className="glass-panel overflow-hidden p-6 md:p-8"
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-healingCyan/20 bg-healingCyan/10 px-4 py-2 text-xs uppercase tracking-[0.24em] text-healingCyan">
-            Trail Somatic Body App
+            Somatic Nurse App
           </div>
           <h1 className="mt-6 max-w-2xl text-4xl font-semibold tracking-tight text-mist md:text-6xl">
-            A calming one-time trial reset designed to power future landing page campaigns.
+            A calming one-time trial reset designed for nurses.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-mistMuted md:text-lg">
-            Check in with your nervous system, receive a grounded supportive response, and follow one brief somatic practice. This duplicate is ready to use as a trail link for other landing pages.
+            Check in with your nervous system, receive a grounded supportive response, and follow one brief somatic practice. This experience is designed to help nurses reconnect and reset quickly.
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
