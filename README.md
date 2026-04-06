@@ -1,4 +1,4 @@
-# Trail Somatic Body App
+# Somatic Nurse App
 
 A production-ready Next.js 15 duplicate app for one-time trial use. It provides a short somatic check-in, supportive guidance, browser-based encouragement audio, and an animated exercise visual that can be reused for future landing page variants.
 
