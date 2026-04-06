@@ -50,18 +50,18 @@ export function NurseCheckinForm() {
           className="glass-panel overflow-hidden p-6 md:p-8"
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-healingCyan/20 bg-healingCyan/10 px-4 py-2 text-xs uppercase tracking-[0.24em] text-healingCyan">
-            Somatic Reset for Nurses
+            Trail Somatic Body App
           </div>
           <h1 className="mt-6 max-w-2xl text-4xl font-semibold tracking-tight text-mist md:text-6xl">
-            A calming post-shift reset designed for the body you carried through care.
+            A calming one-time trial reset designed to power future landing page campaigns.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-mistMuted md:text-lg">
-            Check in with your nervous system, receive a grounded supportive response, and follow one brief somatic practice to help you decompress after a difficult shift.
+            Check in with your nervous system, receive a grounded supportive response, and follow one brief somatic practice. This duplicate is ready to use as a trail link for other landing pages.
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[
-              ['5 gentle questions', 'Simple 1–10 sliders built for tired minds.'],
+              ['5 gentle questions', 'Simple 1–10 sliders for quick trial engagement.'],
               ['Supportive guidance', 'A tailored response based on stress, fatigue, and breath.'],
               ['Audio + visual reset', 'Speech synthesis encouragement with a premium animated cue.'],
             ].map(([title, copy]) => (
