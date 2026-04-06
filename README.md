@@ -1,6 +1,6 @@
-# Somatic Reset for Nurses
+# Trail Somatic Body App
 
-A production-ready Next.js 15 app for helping nurses decompress after difficult shifts with a short somatic check-in, supportive guidance, browser-based encouragement audio, and an animated exercise visual.
+A production-ready Next.js 15 duplicate app for one-time trial use. It provides a short somatic check-in, supportive guidance, browser-based encouragement audio, and an animated exercise visual that can be reused for future landing page variants.
 
 ## Tech Stack
 
@@ -12,7 +12,7 @@ A production-ready Next.js 15 app for helping nurses decompress after difficult 
 
 ## Features
 
-- Premium nurse-focused dark UI with cyan, teal, and blue glow gradients
+- Premium dark UI with cyan, teal, and blue glow gradients
 - Five slider-based check-in questions and optional notes
 - Somatic support message generation based on stress, fatigue, breath, tension, and perceived support
 - Exercise recommendation logic with three somatic exercises
@@ -100,3 +100,6 @@ That configures repo-local Git settings for:
 - `merge.ours.driver=true`
 
 The repo also includes `.gitattributes` rules so `package-lock.json`, `next-env.d.ts`, and `*.tsbuildinfo` prefer the repo's `ours` merge driver instead of forcing manual conflict cleanup each time.
+## GitHub Repo Prompt (when ready)
+
+Create a new GitHub repository named **`trail-somatic-body-app`** and push this codebase as the initial one-time-trial template for your landing page link strategy.

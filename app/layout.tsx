@@ -3,9 +3,9 @@ import type { ReactNode } from 'react';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Somatic Reset for Nurses',
+  title: 'Trail Somatic Body App',
   description:
-    'A premium somatic check-in and nervous system reset experience for nurses after a difficult shift.',
+    'A one-time trial somatic check-in and nervous system reset app designed as a reusable landing page template.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
